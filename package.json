@@ -1,6 +1,6 @@
 {
   "name": "langsmith-fetch",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CLI tool for fetching traces and threads from LangSmith",
   "type": "module",
   "bin": {
