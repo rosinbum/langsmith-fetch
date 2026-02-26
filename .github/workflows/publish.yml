@@ -22,6 +22,7 @@ jobs:
       - run: pnpm install
       - run: pnpm build
       - run: pnpm test -- --run
-      - run: |
-          npm config set "//registry.npmjs.org/:_authToken" ""
+      - name: Publish to npm
+        run: |
+          echo "//registry.npmjs.org/:_authToken=" > ~/.npmrc
           npm publish --provenance --access public
