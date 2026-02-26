@@ -1,0 +1,48 @@
+{
+  "name": "langsmith-fetch",
+  "version": "0.1.0",
+  "description": "CLI tool for fetching traces and threads from LangSmith",
+  "type": "module",
+  "bin": {
+    "langsmith-fetch": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "eslint src/",
+    "format": "prettier --write 'src/**/*.ts'",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cli-progress": "^3.12.0",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "js-yaml": "^4.1.0",
+    "p-limit": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1",
+    "vitest": "^3.0.6"
+  },
+  "keywords": [
+    "langsmith",
+    "langchain",
+    "cli",
+    "traces",
+    "threads"
+  ],
+  "license": "MIT"
+}
