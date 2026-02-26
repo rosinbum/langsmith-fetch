@@ -66,7 +66,7 @@ export function createProgram(): Command {
     .description(
       'Fetch and display LangSmith threads and traces',
     )
-    .version('0.1.1');
+    .version('0.1.2');
 
   // ── trace ────────────────────────────────────────────────
   program
