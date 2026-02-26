@@ -44,5 +44,9 @@
     "traces",
     "threads"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosinbum/langsmith-fetch"
+  },
   "license": "MIT"
 }
