@@ -19,8 +19,9 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-          registry-url: https://registry.npmjs.org
       - run: pnpm install
       - run: pnpm build
       - run: pnpm test -- --run
-      - run: npm publish --provenance --access public
+      - run: |
+          npm config set "//registry.npmjs.org/:_authToken" ""
+          npm publish --provenance --access public
