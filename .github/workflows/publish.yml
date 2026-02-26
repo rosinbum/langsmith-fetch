@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      - run: npm install -g npm@latest
+      - run: npm --version
       - run: pnpm install
       - run: pnpm build
       - run: pnpm test -- --run
       - name: Publish to npm
-        run: |
-          echo "//registry.npmjs.org/:_authToken=" > ~/.npmrc
-          npm publish --provenance --access public
+        run: npm publish --provenance --access public
